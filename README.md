@@ -3,7 +3,7 @@
  
 <small>🧐 I'm currently relearning <strong>Laravel, Angular and Testing</strong> but <strong>.NET and React </strong>❤️</small>
 
-<small>🏁 I'm working on a personal project <a href="https://github.com/dejeloper/organniza-laravel">Organniza Back</a> - <a href="https://github.com/dejeloper/organniza">Organniza Front</a>, a software for organizing home shopping.</small>
+<small>🏁 I'm working on a personal project <a href="https://github.com/dejeloper/despensy">Repo</a> - <a href="https://despensy.dejeloper.com">App</a>, a software for organizing home shopping.</small>
 
 <small>📝 I usually write blogs at <a href="https://blog-dej.vercel.app/">blog-dej.vercel.app</a></small>
 
