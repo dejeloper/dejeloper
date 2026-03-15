@@ -5,10 +5,6 @@
 
 <small>🏁 I'm working on a personal project <a href="https://github.com/dejeloper/despensy">Repo</a> - <a href="https://despensy.dejeloper.com">App</a>, a software for organizing home shopping.</small>
 
-<small>📝 I usually write blogs at <a href="https://blog-dej.vercel.app/">blog-dej.vercel.app</a></small>
-
-<small>📖 Ask me about short stories and novels. I write some <a href="https://blog.dejeloper.com/">here</a></small>
-
 <small>🥰 I love [IU](https://www.instagram.com/dlwlrma/) (Korean actress and singer) 🌟🎤</small>
 
 <small>🚀 Follow my journey: </small>
