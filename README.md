@@ -7,6 +7,8 @@
 
 <small>🥰 I love [IU](https://www.instagram.com/dlwlrma/) (Korean actress and singer) 🌟🎤</small>
 
+<small>📄 Check out my [CV](cv.md)</small>
+
 <small>🚀 Follow my journey: </small>
 
 [<img src="https://img.icons8.com/?size=48&id=63807" width="3.5%"/>](https://dejeloper.com)  &nbsp;
