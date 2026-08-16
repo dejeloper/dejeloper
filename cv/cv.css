@@ -1,0 +1,347 @@
+/* ── Variables ────────────────────────────────────────────── */
+:root {
+	--acero: #7d9fb5;
+	--oscuro: #2e3d4d;
+	--titulo: #2b3b47;
+	--texto: #3a3a3a;
+	--fecha: #86a5b8;
+	--barra-bg: #d2d8dc;
+	--col-izq: 74mm;
+	--font: "Segoe UI", "Century Gothic", Futura, system-ui, -apple-system, sans-serif;
+}
+
+/* ── Base ─────────────────────────────────────────────────── */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #6b7a86;
+	font-family: var(--font);
+	color: var(--texto);
+	padding: 24px 0;
+}
+
+.page {
+	display: grid;
+	grid-template-columns: var(--col-izq) 1fr;
+	width: 210mm;
+	min-height: 297mm;
+	margin: 0 auto;
+	background: #fff;
+	box-shadow: 0 6px 30px rgba(0, 0, 0, .35);
+	font-size: 8.2pt;
+	line-height: 1.4;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+h2 {
+	font-size: 8.8pt;
+	font-weight: 600;
+	letter-spacing: .2em;
+	text-transform: uppercase;
+	color: var(--titulo);
+	margin-bottom: 2.5mm;
+}
+
+h3 {
+	font-size: 9pt;
+	font-weight: 700;
+	color: var(--titulo);
+}
+
+section+section {
+	margin-top: 4mm;
+}
+
+/* ── Columna izquierda ────────────────────────────────────── */
+/* Sin recorte: la foto se muestra completa, sea cual sea su proporción. */
+.foto {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.identidad {
+	background: var(--acero);
+	color: #fff;
+	padding: 6mm 7mm;
+}
+
+.identidad h1 {
+	font-size: 20pt;
+	font-weight: 400;
+	letter-spacing: .06em;
+	line-height: 1.35;
+}
+
+.cargo {
+	margin-top: 4mm;
+	font-size: 10pt;
+	letter-spacing: .12em;
+	line-height: 1.7;
+}
+
+.contacto {
+	background: var(--oscuro);
+	color: #fff;
+	list-style: none;
+	padding: 6mm 7mm;
+}
+
+.contacto li {
+	display: flex;
+	align-items: center;
+	gap: 3mm;
+	padding: 1.4mm 0;
+	font-size: 8pt;
+	word-break: break-word;
+}
+
+.contacto svg {
+	width: 3.6mm;
+	height: 3.6mm;
+	flex-shrink: 0;
+	fill: #fff;
+}
+
+/* Los bloques de la izquierda alternan color continuando la secuencia
+   de la foto: acero (nombre) → oscuro (contacto) → acero → oscuro → acero.
+   El último se estira para que el color llegue al borde de la hoja. */
+.col-izq {
+	display: flex;
+	flex-direction: column;
+}
+
+.col-izq-body {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.col-izq-body section,
+.col-izq-body h2 {
+	color: #fff;
+}
+
+.col-izq-body section {
+	padding: 4.5mm 7mm;
+}
+
+.col-izq-body section+section {
+	margin-top: 0;
+}
+
+.col-izq-body section:last-child {
+	flex: 1;
+}
+
+.col-izq-body section:nth-child(odd) {
+	background: var(--acero);
+}
+
+.col-izq-body section:nth-child(even) {
+	background: var(--oscuro);
+}
+
+.idiomas {
+	list-style: none;
+}
+
+.idiomas li {
+	padding: .6mm 0;
+}
+
+/* ── Columna derecha ──────────────────────────────────────── */
+.col-der {
+	padding: 6mm 9mm 6mm 8mm;
+}
+
+.item+.item {
+	margin-top: 3.5mm;
+}
+
+.item p+p {
+	margin-top: 1.6mm;
+}
+
+.empresa {
+	font-size: 8.5pt;
+}
+
+.periodo {
+	color: var(--fecha);
+	font-size: 8pt;
+	margin-bottom: 1.5mm;
+}
+
+/* Formación: el periodo va a la derecha, en la línea de la institución. */
+.formacion {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 6mm;
+}
+
+.formacion .periodo {
+	flex-shrink: 0;
+	margin-bottom: 0;
+}
+
+/* ── Experiencia técnica ──────────────────────────────────── */
+/* Categoría a la izquierda: ahorra una línea por categoría. */
+.tec {
+	display: grid;
+	grid-template-columns: 26mm 1fr;
+	gap: 3mm;
+}
+
+.tec+.tec {
+	margin-top: 2mm;
+}
+
+.categoria {
+	font-weight: 700;
+	color: var(--titulo);
+}
+
+.fila {
+	display: flex;
+	align-items: baseline;
+	gap: 4mm;
+	padding: .2mm 0;
+}
+
+/* La línea de puntos une tecnologías y nivel sin dibujar una tabla. */
+.fila::after {
+	content: "";
+	order: 1;
+	flex: 1;
+	border-bottom: 1px dotted var(--barra-bg);
+	transform: translateY(-.8mm);
+}
+
+.items em {
+	font-style: normal;
+	color: var(--fecha);
+}
+
+.fila .nivel {
+	order: 2;
+	flex-shrink: 0;
+	font-weight: 700;
+	font-size: 7.8pt;
+	letter-spacing: .04em;
+	color: var(--acero);
+}
+
+.blandas {
+	line-height: 1.7;
+}
+
+/* ── Barra de configuración (solo pantalla) ───────────────── */
+/* Colores propios, independientes del tema del CV, para que la barra
+   siga siendo legible con cualquier combinación elegida. */
+.barra {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 10px 26px;
+	margin: -24px 0 24px;
+	padding: 12px 20px;
+	background: #23282e;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, .3);
+	font-size: 12px;
+	color: #cfd6dc;
+}
+
+.barra .grupo {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.barra label {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	cursor: pointer;
+}
+
+.barra input[type="color"] {
+	width: 26px;
+	height: 26px;
+	padding: 0;
+	border: 1px solid #4a545e;
+	border-radius: 4px;
+	background: none;
+	cursor: pointer;
+}
+
+.barra button {
+	padding: 6px 12px;
+	border: 1px solid #4a545e;
+	border-radius: 4px;
+	background: #31383f;
+	color: #cfd6dc;
+	font: inherit;
+	cursor: pointer;
+}
+
+.barra button:hover {
+	background: #3c444d;
+}
+
+.barra .primaria {
+	border-color: transparent;
+	background: #4d7fa0;
+	color: #fff;
+}
+
+.barra .primaria:hover {
+	background: #5a90b3;
+}
+
+/* ── Impresión ────────────────────────────────────────────── */
+@page {
+	size: A4;
+	margin: 0;
+}
+
+@media print {
+
+	body {
+		background: #fff;
+		padding: 0;
+	}
+
+	.barra {
+		display: none;
+	}
+
+	.page {
+		box-shadow: none;
+		margin: 0;
+		width: 210mm;
+	}
+
+	* {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+
+	.item,
+	.tec {
+		break-inside: avoid;
+	}
+}
