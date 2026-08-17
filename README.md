@@ -5,9 +5,11 @@
 
 <small>🏁 I'm working on a personal project <a href="https://github.com/dejeloper/despensy">Repo</a> - <a href="https://despensy.dejeloper.com">App</a>, a software for organizing home shopping.</small>
 
+<small>🤖 I keep my AI workflow versioned in <a href="https://github.com/dejeloper/ai-support">ai-support</a>: custom commands and settings for <strong>Claude Code</strong> and <strong>opencode</strong>, shared across all my projects.</small>
+
 <small>🥰 I love [IU](https://www.instagram.com/dlwlrma/) (Korean actress and singer) 🌟🎤</small>
 
-<small>📄 Check out my [CV](cv.md)</small>
+<small>📄 Check out my CV: [markdown](cv.md) · [PDF](cv.pdf) · [source of the printable version](cv/)</small>
 
 <small>🚀 Follow my journey: </small>
 
